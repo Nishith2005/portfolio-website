@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishith B - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #1a2332 0%, #2d3748 100%); }
+        .text-gradient { background: linear-gradient(135deg, #c17817, #4a9b8e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px) rotateX(5deg); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .skill-bar { transition: width 1s ease-in-out; }
+        .particle-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+        .content-layer { position: relative; z-index: 1; }
+        .glow { box-shadow: 0 0 20px rgba(193, 120, 23, 0.3); }
+        .nav-link { position: relative; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #c17817; transition: width 0.3s ease; }
+        .nav-link:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-gray-800">Nishith B</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-gray-800">Home</a>
+                    <a href="#projects" class="nav-link text-gray-600 hover:text-gray-800">Projects</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-gray-800">Skills</a>
+                    <a href="about.html" class="nav-link text-gray-600 hover:text-gray-800">About</a>
+                    <a href="contact.html" class="nav-link text-gray-600 hover:text-gray-800">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-800">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#home" class="block px-3 py-2 text-gray-600 hover:text-gray-800">Home</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-600 hover:text-gray-800">Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-600 hover:text-gray-800">Skills</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-gray-800">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-gray-800">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div id="particle-container" class="particle-bg"></div>
+        <div class="content-layer w-full">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-white">
+                        <h1 class="text-5xl lg:text-6xl font-bold mb-6">
+                            Hi, I'm <span class="text-gradient">Nishith B</span>
+                        </h1>
+                        <div class="text-xl lg:text-2xl mb-8 text-gray-300">
+                            <span id="typed-text"></span>
+                        </div>
+                        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+                            Computer Science student at Amrita Vishwa Vidyapeetham with expertise in AI/ML, 
+                            web development, and mobile applications. Passionate about creating innovative 
+                            solutions that make a real impact.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#projects" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 glow">
+                                View My Work
+                            </a>
+                            <a href="contact.html" class="border-2 border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                                Get In Touch
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="relative">
+                            <img src="resources/hero-portrait.png" alt="Nishith B" class="w-80 h-80 object-cover rounded-2xl shadow-2xl">
+                            <div class="absolute -inset-4 bg-gradient-to-r from-orange-500 to-teal-400 rounded-2xl opacity-20 blur-lg"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Innovative solutions that showcase my technical expertise and problem-solving abilities
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Healthcare Project -->
+                <div class="project-card card-hover bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-project="healthcare">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+                        <img src="resources/project-health.png" alt="Healthcare Diagnostic System" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Healthcare Diagnostic System</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Web App</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Interactive 3D human model for symptom-based diagnosis with AI-powered questioning system
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">JavaScript</span>
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">3D Modeling</span>
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">AI/ML</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-blue-600 hover:text-blue-800 font-semibold">View Details</button>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-gray-400 hover:text-gray-600">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                                        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MindLock Project -->
+                <div class="project-card card-hover bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-project="mindlock">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-teal-600 relative overflow-hidden">
+                        <img src="resources/project-mind.png" alt="MindLock App" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">MindLock - Mindfulness App</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Mobile</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Flutter-based productivity app reducing unconscious phone usage through mindfulness techniques
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Flutter</span>
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Analytics</span>
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">UX Design</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-green-600 hover:text-green-800 font-semibold">View Details</button>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-gray-400 hover:text-gray-600">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                                        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Project -->
+                <div class="project-card card-hover bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-project="research">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-600 relative overflow-hidden">
+                        <img src="resources/project-research.png" alt="Air Quality Research" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/20"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-semibold text-gray-800">Air Quality Forecasting</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Research</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            ML and deep learning models for urban air quality forecasting with 5 years of data analysis
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">TensorFlow</span>
+                            <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Data Science</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <button class="text-purple-600 hover:text-purple-800 font-semibold">View Details</button>
+                            <div class="flex space-x-2">
+                                <a href="#" class="text-gray-400 hover:text-gray-600">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path>
+                                        <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Technical Skills</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive skill set across programming, web development, AI/ML, and mobile technologies
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Skills Chart -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Skill Proficiency</h3>
+                    <div id="skills-chart" style="height: 400px;"></div>
+                </div>
+
+                <!-- Skills Categories -->
+                <div class="space-y-6">
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Programming Languages</h3>
+                        <div class="space-y-4">
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">Python</span>
+                                    <span class="text-gray-500">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-blue-500 h-2 rounded-full" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">Java</span>
+                                    <span class="text-gray-500">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-green-500 h-2 rounded-full" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-700">JavaScript</span>
+                                    <span class="text-gray-500">80%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="skill-bar bg-yellow-500 h-2 rounded-full" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Technologies & Frameworks</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-blue-600 font-bold text-lg">HTML</span>
+                                </div>
+                                <span class="text-sm text-gray-600">HTML/CSS</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-green-600 font-bold text-sm">Flutter</span>
+                                </div>
+                                <span class="text-sm text-gray-600">Flutter</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-purple-600 font-bold text-sm">TF</span>
+                                </div>
+                                <span class="text-sm text-gray-600">TensorFlow</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-orange-600 font-bold text-sm">Arduino</span>
+                                </div>
+                                <span class="text-sm text-gray-600">Arduino</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-orange-500 to-teal-500">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-white mb-4">Let's Work Together</h2>
+            <p class="text-xl text-white/90 mb-8">
+                Interested in collaborating on innovative projects? I'd love to hear from you.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="bg-white text-orange-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Get In Touch
+                </a>
+                <a href="about.html" class="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                    Learn More About Me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Nishith B</h3>
+                <p class="text-gray-400 mb-6">Computer Science Student | AI/ML Enthusiast | Web Developer</p>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://linkedin.com/in/nishith-b-482bba324" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.358-.674 1.228-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 8.234c-.868 0-1.572-.704-1.572-1.572s.704-1.572 1.572-1.572 1.572.704 1.572 1.572-.704 1.572-1.572 1.572zm1.338 8.104H3.667V9.097h2.676v7.24zM17.994 2H2.006C1.007 2 0 3.007 0 4.006v12.988C0 18.007 1.007 19 2.006 19h15.988C18.993 19 20 18.007 20 16.994V4.006C20 3.007 18.993 2 17.994 2z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:nishithbondu@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <p class="text-gray-500 text-sm">
+                    © 2024 Nishith B. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
