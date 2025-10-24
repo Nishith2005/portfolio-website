@@ -13,15 +13,15 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hero-bg { background: linear-gradient(135deg, #2d3748 0%, #1a2332 100%); }
-        .text-gradient { background: linear-gradient(135deg, #c17817, #8c6e4d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient { background: linear-gradient(135deg, #2b6cb0, #1a365d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .card-hover { transition: all 0.3s ease; }
         .card-hover:hover { transform: translateY(-8px) rotateX(5deg); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
         .skill-bar { transition: width 1s ease-in-out; }
         .particle-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
         .content-layer { position: relative; z-index: 1; }
-        .glow { box-shadow: 0 0 20px rgba(193, 120, 23, 0.3); }
+        .glow { box-shadow: 0 0 20px rgba(49, 130, 206, 0.3); }
         .nav-link { position: relative; }
-        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #c17817; transition: width 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #2b6cb0; transition: width 0.3s ease; }
         .nav-link:hover::after { width: 100%; }
     </style>
 </head>
@@ -77,10 +77,10 @@
                             solutions that make a real impact.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="#projects" class="bg-yellow-800 hover:bg-yellow-900 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 glow">
+                            <a href="#projects" class="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 glow">
                                 View My Work
                             </a>
-                            <a href="contact.html" class="border-2 border-yellow-700 text-yellow-700 hover:bg-yellow-700 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                            <a href="contact.html" class="border-2 border-blue-700 text-blue-700 hover:bg-blue-700 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                                 Get In Touch
                             </a>
                         </div>
@@ -88,7 +88,7 @@
                     <div class="flex justify-center">
                         <div class="relative">
                             <img src="resources/hero-portrait.png" alt="Nishith B" class="w-80 h-80 object-cover rounded-2xl shadow-2xl">
-                            <div class="absolute -inset-4 bg-gradient-to-r from-yellow-800 to-yellow-600 rounded-2xl opacity-20 blur-lg"></div>
+                            <div class="absolute -inset-4 bg-gradient-to-r from-blue-800 to-blue-600 rounded-2xl opacity-20 blur-lg"></div>
                         </div>
                     </div>
                 </div>
@@ -109,14 +109,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Healthcare Project -->
                 <div class="project-card card-hover bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-project="healthcare">
-                    <div class="h-48 bg-gradient-to-br from-yellow-800 to-yellow-600 relative overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-800 to-blue-600 relative overflow-hidden">
                         <img src="project-health.png" alt="Healthcare Diagnostic System" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black/20"></div>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-xl font-semibold text-gray-800">Healthcare Diagnostic System</h3>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Web App</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Web App</span>
                         </div>
                         <p class="text-gray-600 mb-4">
                             Interactive 3D human model for symptom-based diagnosis with AI-powered questioning system
@@ -127,7 +127,7 @@
                             <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">AI/ML</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <button class="text-yellow-800 hover:text-yellow-900 font-semibold">View Details</button>
+                            <button class="text-blue-800 hover:text-blue-900 font-semibold">View Details</button>
                             <div class="flex space-x-2">
                                 <a href="#" class="text-gray-400 hover:text-gray-600">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -142,14 +142,14 @@
 
                 <!-- MindLock Project -->
                 <div class="project-card card-hover bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-project="mindlock">
-                    <div class="h-48 bg-gradient-to-br from-yellow-800 to-yellow-600 relative overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-800 to-blue-600 relative overflow-hidden">
                         <img src="project-mind.png" alt="MindLock App" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black/20"></div>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-xl font-semibold text-gray-800">MindLock - Mindfulness App</h3>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Mobile</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Mobile</span>
                         </div>
                         <p class="text-gray-600 mb-4">
                             Flutter-based productivity app reducing unconscious phone usage through mindfulness techniques
@@ -160,7 +160,7 @@
                             <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">UX Design</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <button class="text-yellow-800 hover:text-yellow-900 font-semibold">View Details</button>
+                            <button class="text-blue-800 hover:text-blue-900 font-semibold">View Details</button>
                             <div class="flex space-x-2">
                                 <a href="#" class="text-gray-400 hover:text-gray-600">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -175,14 +175,14 @@
 
                 <!-- Research Project -->
                 <div class="project-card card-hover bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer" data-project="research">
-                    <div class="h-48 bg-gradient-to-br from-yellow-800 to-yellow-600 relative overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-blue-800 to-blue-600 relative overflow-hidden">
                         <img src="project-research.png" alt="Air Quality Research" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black/20"></div>
                     </div>
                     <div class="p-6">
                         <div class="flex items-center justify-between mb-3">
                             <h3 class="text-xl font-semibold text-gray-800">Air Quality Forecasting</h3>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">Research</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Research</span>
                         </div>
                         <p class="text-gray-600 mb-4">
                             ML and deep learning models for urban air quality forecasting with 5 years of data analysis
@@ -193,7 +193,7 @@
                             <span class="bg-gray-100 text-gray-700 text-sm px-3 py-1 rounded-full">Data Science</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <button class="text-yellow-800 hover:text-yellow-900 font-semibold">View Details</button>
+                            <button class="text-blue-800 hover:text-blue-900 font-semibold">View Details</button>
                             <div class="flex space-x-2">
                                 <a href="#" class="text-gray-400 hover:text-gray-600">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -237,7 +237,7 @@
                                     <span class="text-gray-500">90%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar bg-yellow-800 h-2 rounded-full" data-width="90"></div>
+                                    <div class="skill-bar bg-blue-800 h-2 rounded-full" data-width="90"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -246,7 +246,7 @@
                                     <span class="text-gray-500">85%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar bg-yellow-700 h-2 rounded-full" data-width="85"></div>
+                                    <div class="skill-bar bg-blue-700 h-2 rounded-full" data-width="85"></div>
                                 </div>
                             </div>
                             <div class="skill-item">
@@ -255,7 +255,7 @@
                                     <span class="text-gray-500">80%</span>
                                 </div>
                                 <div class="w-full bg-gray-200 rounded-full h-2">
-                                    <div class="skill-bar bg-yellow-600 h-2 rounded-full" data-width="80"></div>
+                                    <div class="skill-bar bg-blue-600 h-2 rounded-full" data-width="80"></div>
                                 </div>
                             </div>
                         </div>
@@ -265,26 +265,26 @@
                         <h3 class="text-xl font-semibold text-gray-800 mb-4">Technologies & Frameworks</h3>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="text-center">
-                                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                    <span class="text-yellow-800 font-bold text-lg">HTML</span>
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-blue-800 font-bold text-lg">HTML</span>
                                 </div>
                                 <span class="text-sm text-gray-600">HTML/CSS</span>
                             </div>
                             <div class="text-center">
-                                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                    <span class="text-yellow-800 font-bold text-sm">Flutter</span>
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-blue-800 font-bold text-sm">Flutter</span>
                                 </div>
                                 <span class="text-sm text-gray-600">Flutter</span>
                             </div>
                             <div class="text-center">
-                                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                    <span class="text-yellow-800 font-bold text-sm">TF</span>
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-blue-800 font-bold text-sm">TF</span>
                                 </div>
                                 <span class="text-sm text-gray-600">TensorFlow</span>
                             </div>
                             <div class="text-center">
-                                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-2">
-                                    <span class="text-yellow-800 font-bold text-sm">Arduino</span>
+                                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <span class="text-blue-800 font-bold text-sm">Arduino</span>
                                 </div>
                                 <span class="text-sm text-gray-600">Arduino</span>
                             </div>
@@ -296,17 +296,17 @@
     </section>
 
     <!-- Contact CTA Section -->
-    <section class="py-20 bg-gradient-to-r from-yellow-800 to-yellow-600">
+    <section class="py-20 bg-gradient-to-r from-blue-800 to-blue-600">
         <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-bold text-white mb-4">Let's Work Together</h2>
             <p class="text-xl text-white/90 mb-8">
                 Interested in collaborating on innovative projects? I'd love to hear from you.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html" class="bg-white text-yellow-800 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                <a href="contact.html" class="bg-white text-blue-800 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                     Get In Touch
                 </a>
-                <a href="about.html" class="border-2 border-white text-white hover:bg-white hover:text-yellow-800 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                <a href="about.html" class="border-2 border-white text-white hover:bg-white hover:text-blue-800 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                     Learn More About Me
                 </a>
             </div>
