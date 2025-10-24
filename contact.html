@@ -31,7 +31,7 @@
                     <a href="index.html#projects" class="nav-link text-gray-600 hover:text-gray-800">Projects</a>
                     <a href="index.html#skills" class="nav-link text-gray-600 hover:text-gray-800">Skills</a>
                     <a href="about.html" class="nav-link text-gray-600 hover:text-gray-800">About</a>
-                    <a href="contact.html" class="nav-link text-orange-600 font-semibold">Contact</a>
+                    <a href="contact.html" class="nav-link text-yellow-800 font-semibold">Contact</a>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-800">
@@ -48,7 +48,7 @@
                 <a href="index.html#projects" class="block px-3 py-2 text-gray-600 hover:text-gray-800">Projects</a>
                 <a href="index.html#skills" class="block px-3 py-2 text-gray-600 hover:text-gray-800">Skills</a>
                 <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-gray-800">About</a>
-                <a href="contact.html" class="block px-3 py-2 text-orange-600 font-semibold">Contact</a>
+                <a href="contact.html" class="block px-3 py-2 text-yellow-800 font-semibold">Contact</a>
             </div>
         </div>
     </nav>
@@ -72,30 +72,30 @@
                 <!-- Contact Form -->
                 <div class="bg-gray-50 rounded-2xl p-8">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6">Send Me a Message</h2>
-                    <form id="contact-form" class="space-y-6">
+                    <form id="contact-form" action="https://formspree.io/f/xnngeldy" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required 
-                                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none">
+                                <input type="text" id="firstName" name="firstName" required
+                                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-800 focus:border-transparent outline-none">
                             </div>
                             <div>
                                 <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required 
-                                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none">
+                                <input type="text" id="lastName" name="lastName" required
+                                       class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-800 focus:border-transparent outline-none">
                             </div>
                         </div>
-                        
+
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none">
+                            <input type="email" id="email" name="email" required
+                                   class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-800 focus:border-transparent outline-none">
                         </div>
-                        
+
                         <div>
                             <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
-                            <select id="subject" name="subject" required 
-                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none">
+                            <select id="subject" name="subject" required
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-800 focus:border-transparent outline-none">
                                 <option value="">Select a subject</option>
                                 <option value="collaboration">Project Collaboration</option>
                                 <option value="job">Job Opportunity</option>
@@ -104,24 +104,24 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        
+
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                            <textarea id="message" name="message" rows="5" required 
+                            <textarea id="message" name="message" rows="5" required
                                       placeholder="Tell me about your project, idea, or how we can work together..."
-                                      class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent outline-none resize-none"></textarea>
+                                      class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-800 focus:border-transparent outline-none resize-none"></textarea>
                         </div>
-                        
+
                         <div class="flex items-center">
-                            <input type="checkbox" id="privacy" name="privacy" required 
-                                   class="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500">
+                            <input type="checkbox" id="privacy" name="privacy" required
+                                   class="w-4 h-4 text-yellow-800 border-gray-300 rounded focus:ring-yellow-800">
                             <label for="privacy" class="ml-2 text-sm text-gray-600">
-                                I agree to the <a href="#" class="text-orange-600 hover:text-orange-700">privacy policy</a> and <a href="#" class="text-orange-600 hover:text-orange-700">terms of service</a>
+                                I agree to the <a href="#" class="text-yellow-800 hover:text-yellow-900">privacy policy</a> and <a href="#" class="text-yellow-800 hover:text-yellow-900">terms of service</a>
                             </label>
                         </div>
-                        
-                        <button type="submit" 
-                                class="w-full bg-gradient-to-r from-orange-500 to-teal-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-orange-600 hover:to-teal-600 transition-all duration-300 transform hover:scale-105">
+
+                        <button type="submit"
+                                class="w-full bg-gradient-to-r from-yellow-800 to-yellow-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-yellow-900 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105">
                             Send Message
                         </button>
                     </form>
@@ -150,8 +150,8 @@
                     <div class="space-y-6">
                         <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-200">
                             <div class="flex items-center">
-                                <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-6 h-6 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-yellow-800" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                                     </svg>
@@ -165,8 +165,8 @@
                         
                         <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-200">
                             <div class="flex items-center">
-                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-yellow-800" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
                                     </svg>
                                 </div>
@@ -179,8 +179,8 @@
                         
                         <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-200">
                             <div class="flex items-center">
-                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-yellow-800" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
                                     </svg>
                                 </div>
@@ -193,15 +193,15 @@
                         
                         <div class="contact-card bg-white rounded-xl shadow-lg p-6 border border-gray-200">
                             <div class="flex items-center">
-                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-yellow-800" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path>
                                     </svg>
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold text-gray-800">LinkedIn</h3>
                                     <p class="text-gray-600">
-                                        <a href="https://linkedin.com/in/nishith-b-482bba324" target="_blank" class="text-purple-600 hover:text-purple-700">
+                                        <a href="https://linkedin.com/in/nishith-b-482bba324" target="_blank" class="text-yellow-800 hover:text-yellow-900">
                                             linkedin.com/in/nishith-b-482bba324
                                         </a>
                                     </p>
@@ -211,9 +211,9 @@
                     </div>
                     
                     <!-- Response Time -->
-                    <div class="bg-gradient-to-br from-orange-50 to-teal-50 rounded-xl p-6 border border-orange-200">
+                    <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-xl p-6 border border-yellow-200">
                         <div class="flex items-center mb-4">
-                            <svg class="w-6 h-6 text-orange-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-6 h-6 text-yellow-800 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
                             </svg>
                             <h3 class="text-lg font-semibold text-gray-800">Response Time</h3>
@@ -322,78 +322,6 @@
             document.getElementById('mobile-menu').classList.toggle('hidden');
         });
         
-        // Form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
-            
-            // Validate form
-            if (validateForm(data)) {
-                // Simulate form submission
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                
-                submitBtn.textContent = 'Sending...';
-                submitBtn.disabled = true;
-                
-                setTimeout(() => {
-                    // Show success message
-                    document.getElementById('success-message').classList.add('show');
-                    
-                    // Reset form
-                    this.reset();
-                    
-                    // Reset button
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        document.getElementById('success-message').classList.remove('show');
-                    }, 5000);
-                }, 2000);
-            }
-        });
-        
-        // Form validation
-        function validateForm(data) {
-            const errors = [];
-            
-            if (!data.firstName || data.firstName.trim().length < 2) {
-                errors.push('First name must be at least 2 characters');
-            }
-            
-            if (!data.lastName || data.lastName.trim().length < 2) {
-                errors.push('Last name must be at least 2 characters');
-            }
-            
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!data.email || !emailRegex.test(data.email)) {
-                errors.push('Please enter a valid email address');
-            }
-            
-            if (!data.subject) {
-                errors.push('Please select a subject');
-            }
-            
-            if (!data.message || data.message.trim().length < 10) {
-                errors.push('Message must be at least 10 characters');
-            }
-            
-            if (!data.privacy) {
-                errors.push('Please agree to the privacy policy and terms of service');
-            }
-            
-            if (errors.length > 0) {
-                alert('Please fix the following errors:\n\n' + errors.join('\n'));
-                return false;
-            }
-            
-            return true;
-        }
         
         // FAQ toggle functionality
         document.querySelectorAll('.faq-toggle').forEach(button => {
